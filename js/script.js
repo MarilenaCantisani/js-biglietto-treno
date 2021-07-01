@@ -11,14 +11,10 @@ if(age < 18) {
     var totalPrice = (kmTotal * 0.21) - ((kmTotal * 0.21) * 20 / 100);
     var totalPrice = totalPrice.toFixed(2); 
     console.log("Prezzo biglietto: ", totalPrice);
-
 } else if (age > 65) {
     var totalPrice = (kmTotal * 0.21) - ((kmTotal * 0.21) * 40 / 100);
     var totalPrice = totalPrice.toFixed(2); 
-
     console.log("Prezzo biglietto: ", totalPrice);
-
-
 } else {
     var totalPrice = (kmTotal * 0.21);
     var totalPrice = totalPrice.toFixed(2); 
@@ -26,5 +22,5 @@ if(age < 18) {
 }
 
 // Print result 
-priceTicket.innerHTML = "Il prezzo totale del tuo biglietto è: " + totalPrice + "€"
+priceTicket.innerHTML = "Il prezzo totale del tuo biglietto è: " + totalPrice + "€"; 
 
