@@ -4,22 +4,27 @@ var age = parseInt(prompt("Quanti anni hai?"));
 console.log ("Km da percorrere: ", kmTotal);
 console.log ("Anni: ", age);
 
+var priceTicket = document.getElementById("priceTicket")
+
 // Price ticket 
 if(age < 18) {
-    var price = (kmTotal * 0.21) - ((kmTotal * 0.21) * 20 / 100);
-    var price = price.toFixed(2); 
-    console.log("Prezzo biglietto: ", price);
+    var totalPrice = (kmTotal * 0.21) - ((kmTotal * 0.21) * 20 / 100);
+    var totalPrice = totalPrice.toFixed(2); 
+    console.log("Prezzo biglietto: ", totalPrice);
 
 } else if (age > 65) {
-    var price = (kmTotal * 0.21) - ((kmTotal * 0.21) * 40 / 100);
-    var price = price.toFixed(2); 
+    var totalPrice = (kmTotal * 0.21) - ((kmTotal * 0.21) * 40 / 100);
+    var totalPrice = totalPrice.toFixed(2); 
 
-    console.log("Prezzo biglietto: ", price);
+    console.log("Prezzo biglietto: ", totalPrice);
 
 
 } else {
-    var price = (kmTotal * 0.21);
-    var price = price.toFixed(2); 
-    console.log("Prezzo biglietto: ", price);
+    var totalPrice = (kmTotal * 0.21);
+    var totalPrice = totalPrice.toFixed(2); 
+    console.log("Prezzo biglietto: ", totalPrice);
 }
+
+// Print result 
+priceTicket.innerHTML = "Il prezzo totale del tuo biglietto è: " + totalPrice + "€"
 
