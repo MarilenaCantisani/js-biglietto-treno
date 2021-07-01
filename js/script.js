@@ -14,18 +14,15 @@ var priceTicket = document.getElementById("priceTicket")
 // Price ticket 
 if(age < 18) {
     totalPrice = priceKm - discount20;
-    totalPrice = totalPrice.toFixed(2); 
     console.log("Prezzo biglietto: ", totalPrice);
 } else if (age > 65) {
     totalPrice = priceKm - discount40;
-    totalPrice = totalPrice.toFixed(2); 
     console.log("Prezzo biglietto: ", totalPrice);
 } else {
     totalPrice = (kmTotal * 0.21);
-    totalPrice = totalPrice.toFixed(2); 
     console.log("Prezzo biglietto: ", totalPrice);
 }
 
 // Print result 
-priceTicket.innerHTML = "Il prezzo totale del tuo biglietto è: " + totalPrice + "€"; 
+priceTicket.innerHTML = "Il prezzo totale del tuo biglietto è: " + totalPrice.toFixed(2) + "€"; 
 
